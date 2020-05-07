@@ -57,7 +57,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 420,107.5 420,247</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">270,40 100,40 100,247</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
@@ -113,7 +113,7 @@
         </ui:OpenBrowser>
       </Sequence>
     </FlowStep>
-    <FlowStep>
+    <FlowStep x:Name="__ReferenceID0">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">0,247</av:Point>
@@ -129,7 +129,7 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:GetOCRText Text="{x:Null}" WordsInfo="{x:Null}" DisplayName="Get OCR Text 'text  photo_2019-04-11_...'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetOCRText_2">
+        <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'text  photo_2019-04-11_...'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetOCRText_2">
           <ui:GetOCRText.OCREngine>
             <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
               <ActivityFunc.Argument>
@@ -139,7 +139,10 @@
             </ActivityFunc>
           </ui:GetOCRText.OCREngine>
           <ui:GetOCRText.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="25a8012f-a966-406a-b0ba-95e61b52695c" InformativeScreenshot="b88fae3aae9d6053dd530c58401cb0e6" Selector="&lt;wnd app='applicationframehost.exe' appid='Microsoft.Windows.Photos_8wekyb3d8bbwe!App' title='Photos' /&gt;&lt;uia automationid='AutomationBackgroundControl' cls='Photos.Viewer.Controls.AccessibleContentControl' name='photo_2019-04-11_18-29-33.jpg' /&gt;">
+            <ui:Target Element="{x:Null}" Id="25a8012f-a966-406a-b0ba-95e61b52695c" InformativeScreenshot="082a741a7271f8966fb3c8986502aa73" Selector="&lt;wnd app='applicationframehost.exe' appid='Microsoft.Windows.Photos_8wekyb3d8bbwe!App' title='Photos' /&gt;&lt;uia automationid='AutomationBackgroundControl' cls='Photos.Viewer.Controls.AccessibleContentControl' name='image.jpg' /&gt;">
+              <ui:Target.ClippingRegion>
+                <ui:Region Rectangle="501, 96, 300, 400" />
+              </ui:Target.ClippingRegion>
               <ui:Target.TimeoutMS>
                 <InArgument x:TypeArguments="x:Int32" />
               </ui:Target.TimeoutMS>
@@ -148,11 +151,14 @@
               </ui:Target.WaitForReady>
             </ui:Target>
           </ui:GetOCRText.Target>
+          <ui:GetOCRText.Text>
+            <OutArgument x:TypeArguments="x:String">[imagetext]</OutArgument>
+          </ui:GetOCRText.Text>
         </ui:GetOCRText>
         <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[imagetext]" />
       </Sequence>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID0">
+    <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">320,247</av:Point>

@@ -1723,15 +1723,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Coindust\\.nuget\\packages\\": {}
+    "C:\\Users\\asrinivasan\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "RPA Training",
       "projectName": "RPA Training",
-      "projectPath": "C:\\Users\\Coindust\\Desktop\\RPA Training\\.local",
-      "packagesPath": "C:\\Users\\Coindust\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Coindust\\Desktop\\RPA Training\\.local"
+      "projectPath": "C:\\Users\\asrinivasan\\Desktop\\RPA-Training\\.local",
+      "packagesPath": "C:\\Users\\asrinivasan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\asrinivasan\\Desktop\\RPA-Training\\.local"
     },
     "frameworks": {
       "net461": {
@@ -1759,14 +1759,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU3034",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Extended.Wpf.Toolkit 2.8' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
-      "libraryId": "Extended.Wpf.Toolkit"
-    }
-  ]
+  }
 }
